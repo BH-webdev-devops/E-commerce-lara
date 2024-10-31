@@ -1,19 +1,17 @@
 import { Product } from "../types/interfaces"
 import {Link} from 'react-router-dom'
 
+
 const ProductCard: React.FC<Product> = ({title, description, image, price, id}) => {
+
     return (
-        <>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white p-4">
-                <Link to= {`/product/${id}`}><h2 className='p-4 text-center underline'>{title}</h2></Link>
-                <img className="w-full h-48 object-cover" src={image} alt={title} />
-                <div className="px-4 py-2">
-                    <h2 className="text-lg font-semibold text-gray-800 truncate">{title}</h2>
-                    <p className="text-gray-600 text-sm mt-2">{description.substring(0, 100)}</p>
-                    <p className="text-gray-800 text-xl mt-2 font-bold">€{price}</p>
-                </div>
-            </div>
-        </>
+        <div className="rounded border-solid rounded 2-xl border-2 max-w-96 m-4 " >
+            <Link to={`/product/${id}`} ><h2 className="p-4 text-center underline">{title}</h2></Link>
+            <img className="max-w-36 mx-auto" src={image} alt={title} />
+            <p className="text-base mt-6 mx-auto px-auto">{description.substring(0, 100)}</p>
+            <p className="text-right p-4">Price : {price}</p>
+
+        </div>
     )
 }
 
