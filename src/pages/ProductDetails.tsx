@@ -23,8 +23,8 @@ const ProductDetails: React.FC = () => {
 
                 <img className="max-w-36 mx-auto" src={productByID.image} alt={productByID.title} />
                 <p className="text-base mt-6 mx-auto px-auto">{productByID.description.substring(0, 100)}</p>
-                <p className="text-right p-4">Price : {productByID.price}</p>
-                <button>Buy</button>
+                <p className="text-right p-4">Price : € {productByID.price}</p>
+                <button className="bg-green-500 text-white py-2 px-4 mb-4 ounded">Buy</button>
             </div>
         )}
        
